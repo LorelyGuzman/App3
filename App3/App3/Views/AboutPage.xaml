@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.AboutPage"
+             xmlns:vm="clr-namespace:App3.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#bee5bf</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="maqui.png"/>
+                    <Label Text="❃Maquillaje sin datos maquillados❃" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="30" TextColor="Black" FontAttributes="Bold"/>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Nos alegra que estés aquí" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title"/>
+                <Label Text="Obtendras las mejores recomendaciones de marcas de cosméticos libres de crueldad animal y amigables con el ambiente." TextColor="Black" HorizontalTextAlignment="Center" FontSize="22" Padding="0,0,0,0"/>
+                <Button Margin="0,20,0,0" Text="Para más información has click aquí"
+                        Command="{Binding OpenWebCommand}"
+                        FontSize="20"
+                        BorderRadius="40"
+                        FontAttributes="Bold"
+                        BackgroundColor="#f865b0"
+                        TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

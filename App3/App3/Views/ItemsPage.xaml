@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.ItemsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:App3.ViewModels"  
+             xmlns:model="clr-namespace:App3.Models"  
+             x:Name="BrowseItemsPage">
+
+    <ScrollView>
+        <Grid Padding="20" ColumnSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0">
+                <StackLayout>
+                    <Label Text="Suscríbete para obtener más beneficios como asesorías personalizadas y cursos para emprender en la industria del maquillaje. Obtén nuestra versión premium para acceder a indicadores e información de mercado y a promociones en productos de las marcas con las que colaboramos. " 
+                             HorizontalTextAlignment="Center" TextColor="Black" FontSize="16" />
+                </StackLayout>
+                <StackLayout Margin="0,130,0,0">
+                    <Label Text="Nombre:" FontAttributes="Bold"/>
+                    <Entry Placeholder="Escribe tu nombre" BackgroundColor="#fae8eb" />
+                    <Label Text="Apellido:" Grid.Row="2" FontAttributes="Bold"/>
+                    <Entry Placeholder="Escribe tu apellido" BackgroundColor="#fae8eb"/>
+                    <Label Text="Selecciona tu sexo:" FontAttributes="Bold" />
+                    <Picker x:Name="SexPick" BackgroundColor="#fae8eb" />
+                    <Label Text="Dirección:" FontAttributes="Bold"/>
+                    <Entry Placeholder="Escribe tu dirección" BackgroundColor="#fae8eb"/>
+                </StackLayout>
+            </Grid >
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Image="exito.png" Text="Registrar" Grid.Row="0" Grid.Column="1" BorderRadius="20" BackgroundColor=" #2ecc71 " BorderColor=" #16a085 " BorderWidth="1" TextColor="White" FontAttributes="Bold"/>
+
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

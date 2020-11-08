@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.ItemDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Colaboraciones" TextColor="Black" FontAttributes="Bold" FontSize="30" />
+        <Label Text="Si te interesa realizar colaboraciones nosotros para promocionar tu marca puedes comunicarte al correo:" HorizontalTextAlignment="Center" TextColor="Black" FontSize="22" />
+        <Label Text="colaboraciones@sindatosmaquillados.com" TextColor="Black" FontAttributes="Italic" HorizontalTextAlignment="Center" FontSize="20"/>
+        <Label Text="" TextColor="Black" FontAttributes="Italic" HorizontalTextAlignment="Center" FontSize="25"/>
+        
+    </StackLayout>
+    
+</ContentPage>
